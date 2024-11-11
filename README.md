@@ -1,128 +1,77 @@
-# 🚀 **Job Portal Microservices Application**
+# 🚀 **Job Portal Application** - A Spring Boot Microservices Project
 
-A **Job Portal** built with **Spring Boot** and **Microservices Architecture** for seamless job management and user registration. This application includes multiple microservices for handling job listings and user management, with future enhancements for authentication and frontend integration.
-
----
-
-## 📌 **Key Features:**
-
-- **Job Service**: 🎯 Manages job listings (CRUD operations) via a dedicated microservice.
-- **User Service**: 👤 Handles user registration and profile retrieval.
-- **API Gateway**: 🚪 Routes requests between Job and User services.
-- **Simple User Authentication**: 🔑 User registration functionality, JWT authentication planned for future.
-- **H2 Database**: 💾 In-memory database for rapid development and testing.
+Welcome to the **Job Portal Application** repository! 🎉 This application is designed to connect **job seekers** and **recruiters** seamlessly, built with **Spring Boot**, **Microservices**, and **JWT Authentication**. It leverages a **scalable, modular microservices architecture**, making it ideal for real-world job application processes.
 
 ---
 
-## 🛠️ **Technologies Used:**
+## 💡 **Key Features**
 
-- **Backend**:
-  - 💻 **Spring Boot** - Core framework for building microservices
-  - 🌐 **Spring Cloud Gateway** - Routes API calls between services
-  - 🗄️ **Spring Data JPA** - For database interaction and persistence
-  - 🗃️ **H2 Database** - In-memory database used for testing and development
-
-- **API**:
-  - 📡 **REST APIs** - Communicate between services and the frontend
-
----
-
-## 🏗️ **Architecture Overview:**
-                    +---------------------+
-                    |    **API Gateway**   |
-                    +---------------------+
-                            |  
-        +-------------------+-------------------+
-        |                                       |
-
+### 🛠️ **Core Features**
+- **Job Posting & Management:** Recruiters can post new job positions, including detailed descriptions, requirements, and status updates.
+- **Job Application System:** Job seekers can apply for jobs and track their application statuses in real-time.
+- **Application Withdrawals:** Applicants can withdraw their job applications if they change their mind.
+- **Job Status Updates:** Recruiters can update the status of job postings, e.g., **Position Closed**.
+- **API Gateway Integration:** Centralized API Gateway routes requests between services, ensuring system scalability and efficiency.
+  
+### 🔐 **Security & Authentication**
+- **JWT Authentication:** Users are authenticated via **JWT tokens** for secure, stateless communication.
+- **Role-based Access:** Different roles for **Job Seekers** and **Recruiters** with personalized access levels.
 
 ---
 
-## 🌟 **How It Works:**
+## 🧑‍💻 **Tech Stack**
 
-1. **Job Service**:
-   - Manages job listings (Create, Read, Update, Delete)
-   - Users can view all available jobs and apply for positions.
-   
-2. **User Service**:
-   - Handles user registration and allows users to manage their profiles.
-   - Future plans for adding JWT-based authentication.
+### ⚙️ **Backend**
+- **Spring Boot** - Java-based framework for building scalable, production-grade applications.
+- **Spring Cloud Gateway** - API Gateway for routing and load balancing.
+- **Spring Security** - Secures the application with JWT Authentication.
+- **Spring Data JPA** - Seamlessly integrates with MySQL for efficient database operations.
 
-3. **API Gateway**:
-   - Routes incoming requests to the appropriate service (Job or User).
-   - Simplifies interactions between microservices.
-
-
-
-## 📌 **Key Features:**
-
-- **Job Service**: 🎯 Manages job listings (CRUD operations) via a dedicated microservice.
-- **User Service**: 👤 Handles user registration and profile retrieval.
-- **API Gateway**: 🚪 Routes requests between Job and User services.
-- **Simple User Authentication**: 🔑 User registration functionality, JWT authentication planned for future.
-- **H2 Database**: 💾 In-memory database for rapid development and testing.
+### 💾 **Database**
+- **MySQL** - RDBMS used to store job, user, and application details.
 
 ---
 
-## 🛠️ **Technologies Used:**
+## 📦 **Getting Started**
 
-- **Backend**:
-  - 💻 **Spring Boot** - Core framework for building microservices
-  - 🌐 **Spring Cloud Gateway** - Routes API calls between services
-  - 🗄️ **Spring Data JPA** - For database interaction and persistence
-  - 🗃️ **H2 Database** - In-memory database used for testing and development
+To get the Job Portal Application up and running locally, follow these steps:
 
-- **API**:
-  - 📡 **REST APIs** - Communicate between services and the frontend
+### 🔧 **Prerequisites**
+- **Java 21** or higher
+- **MySQL** installed and running
+- **Maven** or **Gradle** (for building the project)
 
----
+🌐 API Documentation
 
-## 🏗️ **Architecture Overview:**
+Here are some of the key endpoints you can use to interact with the application:
 
-                    +---------------------+
-                    |    **API Gateway**   |
-                    +---------------------+
-                            |  
-        +-------------------+-------------------+
-        |                                       |
-+-------------------+ +-------------------+ | Job Service | | User Service | +-------------------+ +-------------------+ | +--------------------+ | Database | +--------------------+
+📍 User Service
+POST /api/users/register - Register a new user (Job Seeker)
+GET /api/users/{username} - Retrieve user details by username
+📍 Job Service
+POST /api/jobs - Create a new job posting
+GET /api/jobs/{id} - Get job details by ID
+PUT /api/jobs/{id}/status - Update the job status (e.g., "Position Closed")
+POST /api/jobs/{id}/apply - Apply for a job position
 
+📬 Contact
 
----
+For questions or feedback, feel free to reach out to me via LinkedIn or Email.
 
-## 🌟 **How It Works:**
+LinkedIn: https://www.linkedin.com/in/vaibhav-shekhar-028325228
 
-1. **Job Service**:
-   - Manages job listings (Create, Read, Update, Delete)
-   - Users can view all available jobs and apply for positions.
-   
-2. **User Service**:
-   - Handles user registration and allows users to manage their profiles.
-   - Future plans for adding JWT-based authentication.
+🚀 Project Status
 
-3. **API Gateway**:
-   - Routes incoming requests to the appropriate service (Job or User).
-   - Simplifies interactions between microservices.
+This project is actively maintained with plans for future updates, including:
 
+Enhancements to the user interface (UI)
+Additional filtering and searching options for job seekers
+Further optimization of backend services for better performance
+🏆 Acknowledgments
 
-📝 API Endpoints:
+Special thanks to the Spring Boot community and Spring Cloud team for their incredible frameworks.
 
-Job Service API:
-GET /api/jobs: Retrieve all jobs
-POST /api/jobs: Create a new job listing
-User Service API:
-POST /api/users/register: Register a new user
-GET /api/users/{username}: Get user details by username
-Access via API Gateway:
-GET /api/jobs: Access Job Service via Gateway
-POST /api/users/register: Register a user via Gateway
+Big shoutout to MySQL for providing a robust database solution!
 
-
-🔜 Future Improvements:
-
-JWT Authentication: 🔒 Add security for user authentication.
-Frontend Integration: 🌍 Build a user-friendly interface with React/Angular.
-Advanced Features: 📑 Job applications, notifications, resume uploads.
-Cloud Deployment: ☁️ Deploy services to the cloud for scalability.
-
-
+💥 Don't forget to ⭐ Star this repository if you like the project!
+#SpringBoot #Microservices #JobPortal #JWT #API #Tech #Java #Backend #MySQL #JobSearch #Recruitment #OpenSource #SpringCloud #CloudComputing #FullStackDeveloper #Project #SpringSecurity #JobApplication
