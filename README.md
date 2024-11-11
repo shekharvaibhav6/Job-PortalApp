@@ -1,6 +1,6 @@
 # 🚀 **Job Portal Application** - A Spring Boot Microservices Project
 
-Welcome to the **Job Portal Application** repository! 🎉 This application is designed to connect **job seekers** and **recruiters** seamlessly, built with **Spring Boot**, **Microservices**, and **JWT Authentication**. It leverages a **scalable, modular microservices architecture**, making it ideal for real-world job application processes.
+Welcome to the **Job Portal Application** repository! 🎉 This application is designed to connect **job seekers** and **recruiters** seamlessly, built with **Spring Boot**, **Microservices**. It leverages a **scalable, modular microservices architecture**, making it ideal for real-world job application processes.
 
 ---
 
@@ -12,10 +12,6 @@ Welcome to the **Job Portal Application** repository! 🎉 This application is d
 - **Application Withdrawals:** Applicants can withdraw their job applications if they change their mind.
 - **Job Status Updates:** Recruiters can update the status of job postings, e.g., **Position Closed**.
 - **API Gateway Integration:** Centralized API Gateway routes requests between services, ensuring system scalability and efficiency.
-  
-### 🔐 **Security & Authentication**
-- **JWT Authentication:** Users are authenticated via **JWT tokens** for secure, stateless communication.
-- **Role-based Access:** Different roles for **Job Seekers** and **Recruiters** with personalized access levels.
 
 ---
 
@@ -24,7 +20,6 @@ Welcome to the **Job Portal Application** repository! 🎉 This application is d
 ### ⚙️ **Backend**
 - **Spring Boot** - Java-based framework for building scalable, production-grade applications.
 - **Spring Cloud Gateway** - API Gateway for routing and load balancing.
-- **Spring Security** - Secures the application with JWT Authentication.
 - **Spring Data JPA** - Seamlessly integrates with MySQL for efficient database operations.
 
 ### 💾 **Database**
