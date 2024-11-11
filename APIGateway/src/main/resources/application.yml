@@ -1,0 +1,16 @@
+spring:
+  main:
+    web-application-type: reactive  # Set application to use reactive web type (WebFlux)
+  cloud:
+    gateway:
+      routes:
+        - id: job-service
+          uri: http://localhost:8081  # Job service endpoint
+          predicates:
+            - Path=/api/jobs/**  # Route requests with path /api/jobs to the Job service
+        - id: user-service
+          uri: http://localhost:8082  # User service endpoint
+          predicates:
+            - Path=/api/users/**  # Route requests with path /api/users to the User service
+  application:
+    name: api-gateway  # Name of the API Gateway application
